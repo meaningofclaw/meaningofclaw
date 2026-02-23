@@ -1,0 +1,16 @@
+{
+  "name": "meaningofclaw-landing",
+  "version": "1.0.0",
+  "description": "The Ultimate OpenClaw Guide - Landing Page",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve . -p ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meaning of Claw - The Ultimate OpenClaw Guide</title>
+    <meta name="description" content="The answer to everything OpenClaw. Master your AI assistant with The OpenClaw Bible and stay current with ClawBrief newsletters.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #ff6b35;
+            --primary-dark: #e55a2b;
+            --secondary: #1a1a2e;
+            --accent: #16213e;
+            --light: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255,107,53,0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-guarantee {
+            margin-top: 30px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .section-header p {
+            font-size: 20px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+        
+        .product-card.featured {
+            border-color: var(--primary);
+            position: relative;
+        }
+        
+        .product-card.featured::before {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .product-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .product-description {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .product-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .product-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .product-price {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        
+        .product-price span {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        
+        .product-cta {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* Sample Download Section */
+        .sample {
+            padding: 100px 0;
+            background: white;
+            text-align: center;
+        }
+        
+        .sample h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .sample p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .sample-preview {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: left;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .sample-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .sample-logo {
+            font-size: 36px;
+        }
+        
+        .sample-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .sample-tagline {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .sample-content h4 {
+            font-size: 18px;
+            margin: 20px 0 10px;
+            color: var(--secondary);
+        }
+        
+        .sample-content ul {
+            margin-left: 20px;
+            color: var(--text-light);
+        }
+        
+        .sample-content li {
+            margin: 8px 0;
+        }
+        
+        /* Email CTA Section */
+        .cta-section {
+            background: var(--secondary);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .email-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .email-form input {
+            flex: 1;
+            min-width: 280px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .email-form button {
+            padding: 15px 40px;
+        }
+        
+        .privacy-note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: var(--secondary);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 30px;
+        }
+        
+        .footer-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .footer-content p {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            color: rgba(255,255,255,0.4);
+            font-size: 14px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section-header h2,
+            .cta-section h2,
+            .faq h2 {
+                font-size: 32px;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span class="logo-icon">🦞</span>
+                <span>Meaning of Claw</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#sample">Sample</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="btn">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>The Answer to Everything OpenClaw</h1>
+            <p class="hero-subtitle">
+                Master your AI assistant with the complete guide. 
+                From first install to power user — decoded, explained, made simple.
+            </p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn">View Products</a>
+                <a href="#sample" class="btn btn-secondary">Get Free Sample</a>
+            </div>
+            <p class="hero-guarantee">🦞 Join 500+ OpenClaw users mastering their assistants</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Two Ways to Master OpenClaw</h2>
+                <p>Whether you're just starting or staying current, we've got you covered.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- The Bible -->
+                <div class="product-card">
+                    <div class="product-icon">📖</div>
+                    <h3>The OpenClaw Bible</h3>
+                    <p class="product-description">
+                        The comprehensive reference guide. Everything you need to know, 
+                        from installation to advanced workflows. Your permanent OpenClaw manual.
+                    </p>
+                    <ul class="product-features">
+                        <li>📚 6 comprehensive chapters</li>
+                        <li>🔧 Installation & configuration guides</li>
+                        <li>🛡️ Security hardening checklists</li>
+                        <li>💰 Cost optimization strategies</li>
+                        <li>🛠️ Custom skill development</li>
+                        <li>📱 Team deployment playbooks</li>
+                        <li>🔍 Troubleshooting reference</li>
+                    </ul>
+                    <div class="product-price">
+                        $79 <span>one-time</span>
+                    </div>
+                    <a href="#contact" class="btn product-cta">Get The Bible</a>
+                </div>
+                
+                <!-- ClawBrief -->
+                <div class="product-card featured">
+                    <div class="product-icon">📰</div>
+                    <h3>ClawBrief</h3>
+                    <p class="product-description">
+                        Stay current without the noise. We translate every OpenClaw release 
+                        into plain English—what changed, what matters, and what you should do.
+                    </p>
+                    <ul class="product-features">
+                        <li>⚡ Delivered within hours of release</li>
+                        <li>📱 Hobbyist & business editions</li>
+                        <li>🎯 Clear action recommendations</li>
+                        <li>🔍 Security alerts & breaking changes</li>
+                        <li>💡 Pro tips & hidden features</li>
+                        <li>📊 Upgrade decision guidance</li>
+                        <li>📧 Email + PDF + Web access</li>
+                        <li>🔍 Searchable archive</li>
+                    </ul>
+                    <div class="product-price">
+                        $9 <span>/month or $79/year</span>
+                    </div>
+                    <a href="#contact" class="btn product-cta">Subscribe Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Section -->
+    <section class="sample" id="sample">
+        <div class="container">
+            <h2>See What You're Getting</h2>
+            <p>Download a sample issue of ClawBrief and see how we translate technical release notes into plain English.</p>
+            
+            <div class="sample-preview">
+                <div class="sample-header">
+                    <span class="sample-logo">🦞</span>
+                    <div>
+                        <div class="sample-title">ClawBrief</div>
+                        <div class="sample-tagline">OpenClaw Release Notes — Translated</div>
+                    </div>
+                </div>
+                <div class="sample-content">
+                    <h4>Issue #001 — Release 2026.2.20</h4>
+                    <p><strong>One-liner:</strong> Security patches + model improvements. Upgrade recommended.</p>
+                    
+                    <h4>📱 What Hobbyists Need to Know</h4>
+                    <ul>
+                        <li>Telegram threading got way better — handles threaded replies properly</li>
+                        <li>New "thinking" mode for Kimi models — see the reasoning chain</li>
+                        <li>MiniMax OAuth support added — another model provider</li>
+                        <li>6 Telegram fixes — HTML rendering, threading, polishing</li>
+                    </ul>
+                    
+                    <h4>🚨 What Businesses Need to Know</h4>
+                    <ul>
+                        <li><strong>SECURITY:</strong> Metadata leak fixed in TUI surfaces — upgrade NOW if using TUI</li>
+                        <li><strong>BREAKING:</strong> dmPolicy alias changed — check configs</li>
+                        <li><strong>COST IMPACT:</strong> None — no billing changes</li>
+                    </ul>
+                    
+                    <h4>✅ Action Recommendation</h4>
+                    <p><strong>Hobbyists:</strong> Upgrade when convenient<br>
+                    <strong>Businesses:</strong> Upgrade this week for security patch</p>
+                </div>
+            </div>
+            
+            <a href="sample-clawbrief.pdf" class="btn" download>📥 Download Free Sample (PDF)</a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Start Your OpenClaw Journey</h2>
+            <p>Join the newsletter for free tips. Get early access to The Bible when we launch.</p>
+            
+            <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <input type="hidden" name="subject" value="New subscriber from Meaning of Claw">
+                <button type="submit" class="btn">Get Free Updates</button>
+            </form>
+            
+            <p class="privacy-note">🔒 No spam. Unsubscribe anytime. Join 500+ OpenClaw users.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4>What's the difference between The Bible and ClawBrief?</h4>
+                    <p><strong>The Bible</strong> is a comprehensive, permanent reference guide — everything you need to know about OpenClaw in one place. <strong>ClawBrief</strong> is a living newsletter that translates every new release into plain English. The Bible is your foundation; ClawBrief keeps you current.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How often is ClawBrief delivered?</h4>
+                    <p>Within 24 hours of every OpenClaw release — typically every 1-2 weeks. Each issue covers exactly what you need to know: what changed, why it matters, and what you should do.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is The Bible for beginners or experts?</h4>
+                    <p>Both. We start with fundamentals (installation, configuration) and progress to advanced topics (custom skills, team deployment). Whether you're on day 1 or day 100, there's valuable content. Complete beginners may want to start with the free newsletter first.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Do I need both products?</h4>
+                    <p>Not necessarily. <strong>The Bible</strong> is perfect if you want comprehensive knowledge at your own pace. <strong>ClawBrief</strong> is ideal if you want to stay current without digging through GitHub releases. Many users start with ClawBrief, then get The Bible for deep reference later.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>What's your refund policy?</h4>
+                    <p><strong>The Bible:</strong> 30-day money-back guarantee. If it's not what you expected, full refund. <strong>ClawBrief:</strong> Cancel anytime, keep access until the end of your billing period. No questions asked.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is this officially affiliated with OpenClaw?</h4>
+                    <p>No. This is an independent, community-powered resource. We're OpenClaw users who got tired of digging through GitHub releases and wanted better documentation. We're not endorsed by or affiliated with the OpenClaw project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>🦞 Meaning of Claw</h3>
+                <p>The answer to everything OpenClaw</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="mailto:ai@meaningofclaw.com">ai@meaningofclaw.com</a>
+                <a href="#products">Products</a>
+                <a href="#sample">Free Sample</a>
+                <a href="#faq">FAQ</a>
+                <a href="#" onclick="alert('Coming soon!')">Twitter</a>
+            </div>
+            
+            <p class="copyright">
+                © 2026 Meaning of Claw. Not affiliated with OpenClaw.<br>
+                The lobster way. 🦞
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
