@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Meaning of Claw</title>
+    <meta name="description" content="Get in touch with Meaning of Claw. Questions, support, or just want to chat? We're here to help.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #ff6b35;
+            --primary-dark: #e55a2b;
+            --secondary: #1a1a2e;
+            --accent: #16213e;
+            --light: #f8f9fa;
+            --text: #2d3436;
+            --text-light: #636e72;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 140px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--secondary);
+        }
+        
+        .contact-details p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .contact-details a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+        
+        .response-time {
+            display: inline-block;
+            background: var(--light);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        .contact-form > p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255,107,53,0.3);
+        }
+        
+        /* FAQ CTA Section */
+        .faq-cta {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .faq-cta h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .faq-cta p {
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 25px;
+        }
+        
+        .faq-link {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .faq-link:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: rgba(255,255,255,0.6);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        /* Note Box */
+        .note-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .note-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #856404;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🦞</span>
+                Meaning of Claw
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Questions, feedback, or just want to say hello? We'd love to hear from you. We typically respond within 24 hours.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>How Can We Help?</h2>
+                    <p>Whether you have questions about The OpenClaw Bible, need technical support, found a bug, or just want to chat about OpenClaw, we're here for you.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="contact-icon">📧</span>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>Best for detailed questions and support</p>
+                                <a href="mailto:ai@meaningofclaw.com">ai@meaningofclaw.com</a>
+                                <span class="response-time">⚡ Typically 12-24 hours</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <span class="contact-icon">💬</span>
+                            <div class="contact-details">
+                                <h3>Discord Community</h3>
+                                <p>Fast responses from us and the community</p>
+                                <a href="#">Join our Discord Server</a>
+                                <span class="response-time">⚡ Usually within hours</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <span class="contact-icon">🐦</span>
+                            <div class="contact-details">
+                                <h3>Twitter/X</h3>
+                                <p>Quick questions and updates</p>
+                                <a href="#">@meaningofclaw</a>
+                                <span class="response-time">⚡ Usually same day</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="note-box">
+                        <p><strong>Note:</strong> For order issues, please include your order number. For technical support, please describe your setup (OS version, OpenClaw version, etc.) so we can help faster.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form action="mailto:ai@meaningofclaw.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">What's this about?</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Question</option>
+                                <option value="support">Technical Support</option>
+                                <option value="order">Order Issue</option>
+                                <option value="refund">Refund Request</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-cta">
+        <div class="container">
+            <h2>Have a Question?</h2>
+            <p>Check our Frequently Asked Questions for instant answers to common questions.</p>
+            <a href="faq.html" class="faq-link">View FAQ</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p> 2026 Meaning of Claw. All rights reserved. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+        </div>
+    </footer>
+</body>
+</html>
